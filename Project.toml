@@ -1,0 +1,4 @@
+name = "Pedigree"
+uuid = "167ac61e-9d05-4c5f-a9cf-37e3d25daefb"
+authors = ["spencerking <spencer@spencertking.com>"]
+version = "0.1.0"
