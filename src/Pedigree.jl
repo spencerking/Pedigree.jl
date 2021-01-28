@@ -29,5 +29,20 @@ function readped(file)
     return ped
 end
 
+function writeped(pedigree, file)
+    open(file, "w") do f
+        write(f, "FamID\tProband\tFather\tMother\tGender\n")
+        for (id, content) in pedigree
+            line = id * "\t" * content["Proband"] * "\t" * content["Father"] * "\t" * content["Mother"] * "\t" * content["Gender"] * "\n"
+            
+            # for (key, value) in content
+            #     line = line * "\t" * value
+            # end
+            # line = line * "\n"
+            
+            write(f, line)
+        end
+    end
+end
 
 end # module
